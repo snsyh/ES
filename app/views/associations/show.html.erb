@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Association name:</strong>
+  <%= @association.association_name %>
+</p>
+
+<p>
+  <strong>Delegate name:</strong>
+  <%= @association.delegate_name %>
+</p>
+
+<p>
+  <strong>Prefecture type:</strong>
+  <%= @association.prefecture_type_id %>
+</p>
+
+<p>
+  <strong>Tel</strong>
+  <%= @association.tel1 %>-<%= @association.tel2 %>-<%= @association.tel3 %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @association.email %>
+</p>
+
+<%= link_to 'Edit', edit_association_path(@association) %> |
+<%= link_to 'Back', associations_path %>
