@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529143056) do
+ActiveRecord::Schema.define(version: 20150529212909) do
 
   create_table "associations", force: :cascade do |t|
     t.string   "association_name"
@@ -38,5 +38,27 @@ ActiveRecord::Schema.define(version: 20150529143056) do
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
+
+  create_table "instructors", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "instructor_last_name"
+    t.string   "instructor_first_name"
+    t.string   "prefecture_type_id"
+    t.string   "tel"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "instructors", ["email"], name: "index_instructors_on_email", unique: true
+  add_index "instructors", ["reset_password_token"], name: "index_instructors_on_reset_password_token", unique: true
 
 end

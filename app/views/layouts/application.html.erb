@@ -7,6 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <nav>
+    <% if instructor_signed_in? %>
+      Logged in as <strong><%= current_instructor.email %></strong>.
+      <%= link_to "プロフィール変更", edit_instructor_registration_path %> |
+      <%= link_to "ログアウト", destroy_instructor_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "ユーザー登録", new_instructor_registration_path %> |
+      <%= link_to "ログイン", new_instructor_session_path %>
+    <% end %>
+  </nav>
+</header>
 
 <%= yield %>
 

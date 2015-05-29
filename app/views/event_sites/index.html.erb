@@ -22,11 +22,11 @@
     <% @event_sites.each do |event_site| %>
       <tr>
         <td><%= event_site.event_site_name %></td>
-        <td><%= event_site.prefecture_type_id %></td>
+        <td><%= event_site.prefecture_type.name %></td>
         <td><%= event_site.near_station %></td>
         <td><%= event_site.access_route %></td>
         <td><%= event_site.host_comment %></td>
-        <td><%= event_site.carpark_type_id %></td>
+        <td><%= event_site.carpark_type.name %></td>
         <td><%= event_site.capacity %></td>
         <td><%= event_site.degrees_of_latitude %></td>
         <td><%= event_site.degrees_of_longitude %></td>
