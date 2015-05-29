@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_site_name: MyString
+  prefecture_type_id: MyString
+  near_station: MyString
+  access_route: MyString
+  host_comment: MyString
+  carpark_type: MyString
+  capacity: MyString
+  degrees_of_latitude: MyString
+  degree_of_longitude: MyString
+
+two:
+  event_site_name: MyString
+  prefecture_type_id: MyString
+  near_station: MyString
+  access_route: MyString
+  host_comment: MyString
+  carpark_type: MyString
+  capacity: MyString
+  degrees_of_latitude: MyString
+  degree_of_longitude: MyString

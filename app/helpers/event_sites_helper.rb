@@ -1,0 +1,2 @@
+module EventSitesHelper
+end

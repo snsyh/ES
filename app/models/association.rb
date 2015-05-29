@@ -5,7 +5,7 @@ class Association < ActiveRecord::Base
 
   validates :association_name, presence: true, :length => {maximum: 50}
   validates :delegate_name, presence: true, :length => {maximum: 20}
-  validates :prefecture_type_id, presence: true, :length => {is: 2}
+  validates :prefecture_type_id, presence: true, format: {with: /[0-9]{1,2}/}
   validates_with TelValidator
   validates :email, presence: true
   validates_with EmailValidator

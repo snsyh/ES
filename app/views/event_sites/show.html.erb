@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event site name:</strong>
+  <%= @event_site.event_site_name %>
+</p>
+
+<p>
+  <strong>Prefecture type:</strong>
+  <%= @event_site.prefecture_type_id %>
+</p>
+
+<p>
+  <strong>Near station:</strong>
+  <%= @event_site.near_station %>
+</p>
+
+<p>
+  <strong>Access route:</strong>
+  <%= @event_site.access_route %>
+</p>
+
+<p>
+  <strong>Host comment:</strong>
+  <%= @event_site.host_comment %>
+</p>
+
+<p>
+  <strong>Carpark type:</strong>
+  <%= @event_site.carpark_type_id %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @event_site.capacity %>
+</p>
+
+<p>
+  <strong>Degrees of latitude:</strong>
+  <%= @event_site.degrees_of_latitude %>
+</p>
+
+<p>
+  <strong>Degrees of longitude:</strong>
+  <%= @event_site.degrees_of_longitude %>
+</p>
+
+<%= link_to 'Edit', edit_event_site_path(@event_site) %> |
+<%= link_to 'Back', event_sites_path %>

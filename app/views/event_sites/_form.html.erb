@@ -1,0 +1,53 @@
+<%= form_for(@event_site) do |f| %>
+  <% if @event_site.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_site.errors.count, "error") %> prohibited this event_site from being saved:</h2>
+
+      <ul>
+      <% @event_site.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :event_site_name %><br>
+    <%= f.text_field :event_site_name %>
+  </div>
+  <div class="field">
+    <%= f.label :prefecture_type_id %><br>
+    <%= f.collection_select :prefecture_type_id, PrefectureType.all, :id, :name, :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :near_station %><br>
+    <%= f.text_field :near_station %>
+  </div>
+  <div class="field">
+    <%= f.label :access_route %><br>
+    <%= f.text_field :access_route %>
+  </div>
+  <div class="field">
+    <%= f.label :host_comment %><br>
+    <%= f.text_field :host_comment %>
+  </div>
+  <div class="field">
+    <%= f.label :carpark_type_id %><br>
+    <%= f.collection_select :carpark_type_id, CarparkType.all, :id, :name, :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br>
+    <%= f.text_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :degrees_of_latitude %><br>
+    <%= f.text_field :degrees_of_latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :degrees_of_longitude %><br>
+    <%= f.text_field :degrees_of_longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
