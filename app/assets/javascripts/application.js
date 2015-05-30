@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready(function() {
+$('.slider').bxSlider();
+//ここで指定した'.slider'というclass名でhtmlを囲みます
+});

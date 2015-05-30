@@ -19,6 +19,7 @@ gem 'jquery-rails'
 
 # Use jquery-UI as the JavaScript library
 gem 'jquery-ui-rails'
+gem 'bxslider-rails'
 gem 'jquery-turbolinks'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
